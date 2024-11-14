@@ -224,7 +224,7 @@ query4 = """
 """
 
 # Génération de la dimension temps avec une plage de dates
-date_range = pd.date_range(start="2006-01-01", end="2006-12-31", freq="D")
+date_range = pd.date_range(start="2006-01-01", end="2008-12-31", freq="D")
 df_temps = pd.DataFrame({
     'dim_date_id': (date_range - pd.Timestamp("1970-01-01")) // pd.Timedelta('1D'),  # ID unique pour chaque date
     'date_dim_date_t': date_range,
